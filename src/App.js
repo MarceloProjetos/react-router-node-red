@@ -16,7 +16,9 @@ import {
   Badge 
 } from 'react-bootstrap';
 
+import Login from './login';
 import Dashboard from './dashboard'
+import Error from './Error';
 
 const ConsultaItem = props =>
   <Link to={{ pathname: props.form, query: props.parametros || '' }}>
@@ -34,7 +36,7 @@ class App extends Component {
   render() {
 
     const main = ( 
-      
+
       <div className="App">
         <Navbar inverse collapseOnSelect style={{borderRadius: 0}} onSelect={this.handleNavSelect}>
           <Navbar.Header>
