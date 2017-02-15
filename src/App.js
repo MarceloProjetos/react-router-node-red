@@ -32,7 +32,9 @@ const TaskItem = props =>
 
 class App extends Component {
   render() {
-    return (
+
+    const main = ( 
+      
       <div className="App">
         <Navbar inverse collapseOnSelect style={{borderRadius: 0}} onSelect={this.handleNavSelect}>
           <Navbar.Header>
@@ -98,6 +100,17 @@ class App extends Component {
 
       </div> 
     );
+
+    const login = (<Login onLogin={this.handleLogin} />);
+    
+    return(
+      <div>
+        {this.state.usuario ? main : login}
+
+        {this.state.dialog}
+      </div>
+
+    )
   }
 }
 
